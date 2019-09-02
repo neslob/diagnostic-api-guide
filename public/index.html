@@ -328,7 +328,7 @@ openfin --launch --config app.json
 							<h3>CommandLine Arguments</h3>
 							<pre><code class="hljs system-clArgs" contenteditable>
 fin.desktop.System.getCommandLineArguments(args => {
-	document.getElementById("clArgsInfo").innerHTML = JSON.stringify(args);
+	document.getElementById("clArgsInfo").innerHTML = JSON.stringify(args,null,2);
 	hljs.highlightBlock(document.getElementById("clArgsInfo"));
 });
 							</code></pre>
@@ -341,7 +341,7 @@ fin.desktop.System.getCommandLineArguments(args => {
 							<h3>DeviceId</h3>
 							<pre><code class="hljs system-dId" contenteditable>
 fin.desktop.System.getDeviceId(args => {
-	document.getElementById("dIdInfo").innerHTML = JSON.stringify(args);
+	document.getElementById("dIdInfo").innerHTML = JSON.stringify(args,null,2);
 	hljs.highlightBlock(document.getElementById("dIdInfo"));
 });
 							</code></pre>
@@ -354,7 +354,7 @@ fin.desktop.System.getDeviceId(args => {
 							<h3>Host Specs</h3>
 							<pre><code class="hljs system-hSpecs" contenteditable>
 fin.desktop.System.getHostSpecs(args => {
-	document.getElementById("hSpecsInfo").innerHTML = JSON.stringify(args);
+	document.getElementById("hSpecsInfo").innerHTML = JSON.stringify(args,null,2);
 	hljs.highlightBlock(document.getElementById("hSpecsInfo"));
 });
 							</code></pre>
@@ -381,7 +381,7 @@ fin.desktop.System.log("info",
 							<h3>Log List</h3>
 							<pre><code class="hljs system-logList" contenteditable>
 fin.desktop.System.getLogList(logList => {
-	document.getElementById("logListInfo").innerHTML = JSON.stringify(logList);
+	document.getElementById("logListInfo").innerHTML = JSON.stringify(logList,null,2);
 	hljs.highlightBlock(document.getElementById("logListInfo"));
 });
 							</code></pre>
@@ -408,7 +408,7 @@ fin.desktop.System.getLog("debugl170315170013.log",log => {
 							<h3>Mouse Position</h3>
 							<pre><code class="hljs system-mouseP" contenteditable>
 fin.desktop.System.getMousePosition(r => {
-	document.getElementById("mousePInfo").innerHTML = JSON.stringify(r);
+	document.getElementById("mousePInfo").innerHTML = JSON.stringify(r,null,2);
 	hljs.highlightBlock(document.getElementById("mousePInfo"));
 });
 
@@ -422,7 +422,7 @@ fin.desktop.System.getMousePosition(r => {
 							<h3>Process List</h3>
 							<pre><code class="hljs system-processList" contenteditable>
 fin.desktop.System.getProcessList(r => {
-	document.getElementById("processListInfo").innerHTML = JSON.stringify(r);
+	document.getElementById("processListInfo").innerHTML = JSON.stringify(r,null,2);
 	hljs.highlightBlock(document.getElementById("processListInfo"));
 });
 
@@ -436,7 +436,7 @@ fin.desktop.System.getProcessList(r => {
 							<h3>Proxy Settings</h3>
 							<pre><code class="hljs system-proxySettings" contenteditable>
 fin.desktop.System.getProxySettings(r => {
-	document.getElementById("proxySettingsInfo").innerHTML = JSON.stringify(r);
+	document.getElementById("proxySettingsInfo").innerHTML = JSON.stringify(r,null,2);
 	hljs.highlightBlock(document.getElementById("proxySettingsInfo"));
 });
 
@@ -451,7 +451,7 @@ fin.desktop.System.getProxySettings(r => {
 							<h3>RVM Info</h3>
 							<pre><code class="hljs system-rvmInfo" contenteditable>
 fin.desktop.System.getRvmInfo(r => {
-	document.getElementById("rvmInfo").innerHTML = JSON.stringify(r);
+	document.getElementById("rvmInfo").innerHTML = JSON.stringify(r,null,2);
 	hljs.highlightBlock(document.getElementById("rvmInfo"));
 });
 
@@ -465,7 +465,7 @@ fin.desktop.System.getRvmInfo(r => {
 							<h3>Runtime Version</h3>
 							<pre><code class="hljs system-versionInfo" contenteditable>
 fin.desktop.System.getVersion(r => {
-	document.getElementById("versionInfo").innerHTML = JSON.stringify(r);
+	document.getElementById("versionInfo").innerHTML = JSON.stringify(r,null,2);
 	hljs.highlightBlock(document.getElementById("versionInfo"));
 });
 
@@ -479,7 +479,7 @@ fin.desktop.System.getVersion(r => {
 							<h3>Screen Info</h3>
 							<pre><code class="hljs system-monitor" contenteditable>
 fin.desktop.System.getMonitorInfo(function (monitorInfo) {
-	document.getElementById("monitorInfo").innerHTML = JSON.stringify(monitorInfo);
+	document.getElementById("monitorInfo").innerHTML = JSON.stringify(monitorInfo,null,2);
 	 hljs.highlightBlock(document.getElementById("monitorInfo"));
 });
 							</code></pre>
@@ -505,7 +505,7 @@ fin.desktop.Window.getCurrent().getSnapshot( bSixFour =>{
 							<h3>Window State</h3>
 							<pre><code class="hljs window-state" contenteditable>
 fin.desktop.Window.getCurrent().getState(r =>{
-	document.getElementById("stateInfo").innerHTML = JSON.stringify(r);
+	document.getElementById("stateInfo").innerHTML = JSON.stringify(r,null,2);
 	hljs.highlightBlock(document.getElementById("stateInfo"));
 	});
 							</code></pre>
@@ -518,7 +518,7 @@ fin.desktop.Window.getCurrent().getState(r =>{
 							<h3>Window Zoom</h3>
 							<pre><code class="hljs window-zoom" contenteditable>
 fin.desktop.Window.getCurrent().getZoomLevel(r =>{
-	document.getElementById("zoomInfo").innerHTML = JSON.stringify(r);
+	document.getElementById("zoomInfo").innerHTML = JSON.stringify(r,null,2);
 	hljs.highlightBlock(document.getElementById("zoomInfo"));
 	});
 							</code></pre>
@@ -532,7 +532,7 @@ fin.desktop.Window.getCurrent().getZoomLevel(r =>{
 							<h3>Window Showing</h3>
 							<pre><code class="hljs window-showing" contenteditable>
 fin.desktop.Window.getCurrent().isShowing(r =>{
-	document.getElementById("showingInfo").innerHTML = JSON.stringify(r);
+	document.getElementById("showingInfo").innerHTML = JSON.stringify(r,null,2);
 	hljs.highlightBlock(document.getElementById("showingInfo"));
 });
 							</code></pre>
@@ -546,7 +546,7 @@ fin.desktop.Window.getCurrent().isShowing(r =>{
 							<h3>Window Bounds</h3>
 							<pre><code class="hljs window-bounds" contenteditable>
 fin.desktop.Window.getCurrent().getBounds(r =>{
-	document.getElementById("boundsInfo").innerHTML = JSON.stringify(r);
+	document.getElementById("boundsInfo").innerHTML = JSON.stringify(r,null,2);
 	hljs.highlightBlock(document.getElementById("boundsInfo"));
 });
 							</code></pre>
